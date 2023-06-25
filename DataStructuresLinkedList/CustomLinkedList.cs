@@ -28,6 +28,32 @@ namespace DataStructuresLinkedList
                 current.Next = newNode;
             }
         }
+        public void Insert(int value)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                newNode.Next = head;
+                head = newNode;
+            }
+        }
+
+        public void Pop()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty. Cannot perform pop operation.");
+                return;
+            }
+
+            head = head.Next;
+        }
+
 
         public void Display()
         {

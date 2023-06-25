@@ -7,7 +7,7 @@ namespace DataStructuresLinkedList
         static void Main(string[] args)
         {
             Console.WriteLine("choose what program u want");
-            Console.WriteLine("1.creating a simple linked list\n2.Adding numbers to the linkedlist\n3.create a linked list by using append\n4.Inserting a values in to a linkedlist\n5.lll");
+            Console.WriteLine("1.creating a simple linked list\n2.Adding numbers to the linkedlist\n3.create a linked list by using append\n4.Inserting a values in to a linkedlist\n5.Deleting the value in to a linkedlist");
             int choose =Convert.ToInt32(Console.ReadLine());
             switch(choose)
             {
@@ -42,7 +42,15 @@ namespace DataStructuresLinkedList
                     ll.Display();
                     break;
                  case 5:
-                    
+                    CustomLinkedList c = new CustomLinkedList();
+                    c.Insert(70);
+                    c.Insert(30);
+                    c.Insert(56);
+                    c.Display();
+
+                    c.Pop();
+                    c.Display();
+
 
                     break; 
             }
