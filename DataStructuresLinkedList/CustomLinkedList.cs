@@ -53,6 +53,46 @@ namespace DataStructuresLinkedList
 
             head = head.Next;
         }
+        public void InsertTheValue(int value)
+        {
+            Node newNode = new Node(value);
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                Node current = head;
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+                current.Next = newNode;
+            }
+        }
+
+        public void PopLast()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty. Cannot perform popLast operation.");
+                return;
+            }
+
+            if (head.Next == null)
+            {
+                head = null;
+                return;
+            }
+
+            Node current = head;
+            while (current.Next.Next != null)
+            {
+                current = current.Next;
+            }
+            current.Next = null;
+        }
 
 
         public void Display()
