@@ -19,7 +19,15 @@ namespace DataStructuresLinkedList
                     l.Insert(70);
                     l.Display();
                     break;
+                    case 2:
+                    Console.WriteLine("welcome to the creating linked list by adding numbers");
+                    CustomLinkedList linkedList = new CustomLinkedList();
+                    linkedList.Add(70);
+                    linkedList.Add(30);
+                    linkedList.Add(56);
+                    linkedList.Display();
                     break;
+
             }
         }
     }
